@@ -18,5 +18,10 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', 'clinicaController@index' );
-Route::get('/agendar', 'clinicaController@agendar' );
+Route::get('/', 'clinicaController@index');
+
+Route::group(['prefix' => 'clinica'], function () {
+    Route::post('agendamento', "clinicaController@store");
+    Route::get('profissionais/{id}', "clinicaController@getProfissionais");
+    Route::get('indicacao', "clinicaController@getIndicacao");
+});
