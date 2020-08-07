@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', 'ClinicaController@index' );
-Route::get('/agendar', 'ClinicaController@agendar' );
+Route::get('/', 'clinicaController@index' );
+Route::get('/agendar', 'clinicaController@agendar' );
