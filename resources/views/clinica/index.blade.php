@@ -10,7 +10,6 @@
       @foreach ($ocupacao as $i)
       <option value="{{ $i['especialidade_id'] }}">{{ $i['nome'] }}</option>
       @endforeach
-
     </select>
     <a class="btn btn-success form-control agendar">AGENDAR</a>
   </div>
@@ -29,6 +28,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      
       <div class="modal-body">
         <form id="ajax-form-submit">
           <input type="hidden" name="_token" value="{{csrf_token()}}" />
@@ -55,6 +55,7 @@
             </div>
           </div>
       </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
         <button type="submit" class="btn btn-success solicitacao">SOLICITAR HORÁRIO</button>
