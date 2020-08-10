@@ -25,14 +25,17 @@ class clinicaController extends Controller
         $agenda = new Agenda();
         $agenda->fill($input);
         $agenda->date_time = date("Y-m-d H:i:s");
+        
 
         try {
             $agenda->save();
             return ['code'=> 0 , 'msg'=>'Dados cacastrados com sucesso!', 'obj'=>$agenda];
+            
 
         } catch (\Exception $e) {
             return ['code'=> 1 , 'msg'=>'Erro ao salvar os dados!\n'.$e, 'obj'=>$agenda];
         }
+        
         
     }
     

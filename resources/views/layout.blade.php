@@ -43,19 +43,19 @@
                         $.each(data, function(i, d) {
                             var color = Math.floor((Math.random() * 256) + 1);
                             var newCard = `<div class="card">
-                                            <div class="row no-gutters">
-                                                <div class="col-auto m-2">
-                                                    <img src="//placehold.it/50/${color}" class="img-fluid rounded-circle" alt="">
-                                                </div>
-                                                <div class="col m-2">
-                                                    <div class="card-block px-2 ">
-                                                        <strong class="card-title">${d.nome}</strong><br>
-                                                        <small class="card-text">CRM: ${d.documento_conselho}</small><br>
-                                                        <a href="#" class="btn btn-success" style="color: white; border-radius: 5px;"data-toggle="modal" data-idspec="${$(".espec").val()}" data-idprof="${d.profissional_id}" data-target="#adengamentoModal" >AGENDAR</a>
-                                                    </div>
-                                                </div>
+                                    <div class="row no-gutters">
+                                        <div class="col-auto m-2">
+                                            <img src="//placehold.it/50/${color}" class="img-fluid rounded-circle" alt="">
+                                        </div>
+                                        <div class="col m-2">
+                                            <div class="card-block px-2 ">
+                                                <strong class="card-title">${d.nome}</strong><br>
+                                                <small class="card-text">CRM: ${d.documento_conselho}</small><br>
+                                                <a href="#" class="btn btn-success" style="color: white; border-radius: 5px;"data-toggle="modal" data-idspec="${$(".espec").val()}" data-idprof="${d.profissional_id}" data-target="#adengamentoModal" >AGENDAR</a>
                                             </div>
-                                        </div>`
+                                        </div>
+                                    </div>
+                                </div>`
                             $('.profissionais').append(newCard);
                         });
                     }

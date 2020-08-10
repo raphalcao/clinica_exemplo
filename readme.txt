@@ -17,3 +17,28 @@ Para executá-los, digite no terminal o comando o seguinte código:
 - vendor\bin\phpunit --filter {nome da função} -> Executa apenas o determinado teste.
 Ex: vendor\bin\phpunit --filter testRouteStore
 
+EDIT 2:
+- Implementando o docker
+
+- Para download da imagem docker, executar os seguintes passos:
+
+    - Criar um novo diretório e na IDE criar o arquivo docker-compose.yaml
+    
+    - No arquivo, adicionar a seguinte instrução:
+        version: '3'
+
+        services: 
+            laravel-app:
+                image: raphalcao/laravel-clinica-exemplo:latest
+                ports: 
+                    - "8080:80"
+
+    - No terminal docker, após localizar o diretório da aplicação, executar os comandos:
+    - docker-compose up -d
+
+    - Para verificar a imagem clonada, digite: 
+    - docker ps
+
+    - Caso seja necessário efetuar alguma permissão de rede ou acesso, use o comando: 
+    - docker exec -it teste_laravel-app_1 bash
+    

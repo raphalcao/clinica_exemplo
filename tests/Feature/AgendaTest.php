@@ -27,8 +27,6 @@ class AgendaTest extends TestCase
 
         $arrayCompared = array_diff($expected, $agenda->getFillable());
 
-        //dd($arrayCompared);
-
         $this->assertEquals(0, count($arrayCompared));
     }
 }
